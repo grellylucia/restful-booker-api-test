@@ -1,4 +1,4 @@
-export const VALID_RESPONSE_SCHEMA = {
+export const VALID_AUT_RESPONSE_SCHEMA = {
     "type": "object",
     "default": {},
     "required": [
@@ -6,6 +6,20 @@ export const VALID_RESPONSE_SCHEMA = {
     ],
     "properties": {
         "token": {
+            "type": "string",
+            "default": ""
+        }
+    }
+}
+
+export const INVALID_AUTH_RESPONSE_SCHEMA = {
+    "type": "object",
+    "default": {},
+    "required": [
+        "reason"
+    ],
+    "properties": {
+        "reason": {
             "type": "string",
             "default": ""
         }

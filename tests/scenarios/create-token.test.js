@@ -12,6 +12,15 @@ describe('Create token', () => {
         const response = await authApi.createToken(data.VALID_AUTH)
 
         assert.equal(response.status, 200)
-        expect(response.data).to.be.jsonSchema(schema.VALID_RESPONSE_SCHEMA)
+        expect(response.data).to.be.jsonSchema(schema.VALID_AUT_RESPONSE_SCHEMA)
+    });
+
+
+    it('Should returns bad credentials message', async () => {
+        const response = await authApi.createToken(data.INVALID_AUTH)
+
+        assert.equal(response.status, 200)
+        assert.equal(response.data.reason, "Bad credentials")
+        expect(response.data).to.be.jsonSchema(schema.INVALID_AUTH_RESPONSE_SCHEMA)
     });
 })
