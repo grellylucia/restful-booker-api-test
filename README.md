@@ -1,2 +1,3 @@
-# restful-booker-api-test
-Final project for Nest Academy QA
+# Restful Booker API Test
+
+This is a final project for Nest Academy QA
