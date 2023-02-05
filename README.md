@@ -4,6 +4,8 @@ This is final project for Nest Academy QA
 
 Endpoints to test : https://restful-booker.herokuapp.com/apidoc/index.html#api-Booking-CreateBooking
 
+Test Case : https://app.qase.io/project/RBA
+
 ### Step to reproduce :
 1. Open terminal and clone this repository 
 ```bash
