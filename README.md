@@ -1,4 +1,4 @@
-# Restful Booker API Test
+# Restful Booker API Test using Mocha-Chai
 
 This is final project for Nest Academy QA
 
