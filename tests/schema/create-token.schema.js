@@ -1,4 +1,4 @@
-export const VALID_AUT_RESPONSE_SCHEMA = {
+export const VALID_AUTH_RESPONSE_SCHEMA = {
     "type": "object",
     "default": {},
     "required": [
