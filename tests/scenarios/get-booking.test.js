@@ -7,5 +7,6 @@ describe ( 'Get Booking',() => {
 
         assert.equal(response.status, 200)
     
-    })
+    });
+    
 }) 

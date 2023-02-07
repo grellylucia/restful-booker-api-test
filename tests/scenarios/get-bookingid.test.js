@@ -7,5 +7,12 @@ describe ( 'Get Booking ID',() => {
 
         assert.equal(response.status, 200)
     
+    });
+
+    it('Get booking by id not registed', async () => {
+        const response = await bookingAPI.getBookingId(10)
+
+        assert.equal(response.status, 200)
+    
     })
 }) 

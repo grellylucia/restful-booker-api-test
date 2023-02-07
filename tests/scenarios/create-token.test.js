@@ -15,11 +15,20 @@ describe('Create token', () => {
         expect(response.data).to.be.jsonSchema(schema.VALID_AUTH_RESPONSE_SCHEMA)
     });
 
-    it('Should returns bad credentials message', async () => {
-        const response = await authApi.createToken(data.INVALID_AUTH)
+    it('Create token with username registed & password not registed', async () => {
+        const response = await authApi.createToken(data.INVALID_AUTH_PASSWORD_NOT_REGISTED)
 
         assert.equal(response.status, 200)
         assert.equal(response.data.reason, "Bad credentials")
-        expect(response.data).to.be.jsonSchema(schema.INVALID_AUTH_RESPONSE_SCHEMA)
+        expect(response.data).to.be.jsonSchema(schema.INVALID_AUTH_PASSWORD_NOT_REGISTED_RESPONSE_SCHEMA)
     });
+
+    it('Create token with username not registed & password not registed ', async () => {
+        const response = await authApi.createToken(data.INVALID_AUTH_USERNAME_NOT_REGISTED)
+
+        assert.equal(response.status, 200)
+        assert.equal(response.data.reason, "Bad credentials")
+        expect(response.data).to.be.jsonSchema(schema.INVALID_AUTH_USERNAME_NOT_REGISTED_RESPONSE_SCHEMA)
+
+})
 })
