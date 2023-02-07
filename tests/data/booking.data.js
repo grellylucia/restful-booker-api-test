@@ -1,8 +1,8 @@
 import * as generator from '$helpers/generator'
 
 export const UPDATE_BOOKING_DATA = {
-    "firstname": "Josh",
-    "lastname": "Allen",
+    "firstname": generator.firstName(),
+    "lastname": generator.lastname(),
     "totalprice": 111,
     "depositpaid": true,
     "bookingdates": {
