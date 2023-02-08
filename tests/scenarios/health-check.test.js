@@ -1,7 +1,7 @@
 import { assert } from "chai";
 import pingApi from "$pages/ping.api";
 
-describe('Health check',() => {
+describe('Ping health check',() => {
 
     it('Should return status 201 created', async () => {
         const response = await pingApi.healthCheck()
